@@ -1,0 +1,13 @@
+@function breakpoint($break) {
+  @if $break == "sm" {
+    @return map-get($breakpoints, sm);
+  } @else if $break == "md" {
+    @return map-get($breakpoints, md);
+  } @else if $break == "lg" {
+    @return map-get($breakpoints, lg);
+  } @else if $break == "xl" {
+    @return map-get($breakpoints, xl);
+  } @else {
+    @error "#{$break} is not a valid value!";
+  }
+}
